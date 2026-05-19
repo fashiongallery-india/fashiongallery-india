@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Gallery</title>
+  <meta name="description" content="Fashion Gallery - Latest Stitched collection. Afghan Style and Rayon dresses. Order on WhatsApp!">
+  <meta name="keywords" content="fashion, dress, stitched, Afghan style, Rayon, Indian dress, online shop">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    img, video { max-width: 100%; }
+    body { font-family: Arial, sans-serif; background: #fff; }
+    nav { background: #1a1a2e; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    nav h1 { color: #e94560; font-size: 24px; }
+    nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+    nav ul li a { color: white; text-decoration: none; font-size: 14px; }
+    nav ul li a:hover { color: #e94560; }
+    .hero { position: relative; width: 100%; height: 550px; overflow: hidden; }
+    .slides img { width: 100%; height: 550px; object-fit: cover; display: none; }
+    .slides img.active { display: block; }
+    .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; width: 90%; }
+    .hero-text h2 { color: white; font-size: 38px; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
+    .hero-text p { color: #f0f0f0; font-size: 16px; margin: 10px 0 20px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
+    .btn { background: #e94560; color: white; padding: 12px 28px; border-radius: 25px; font-size: 15px; text-decoration: none; display: inline-block; margin: 5px; transition: background 0.3s; }
+    .btn:hover { background: #c73652; }
+    .btn-outline { background: transparent; border: 2px solid white; color: white; padding: 10px 25px; border-radius: 25px; font-size: 15px; text-decoration: none; display: inline-block; margin: 5px; }
+    .btn-outline:hover { background: white; color: #1a1a2e; }
+    .section { padding: 50px 20px; text-align: center; }
+    .section h2 { font-size: 28px; color: #1a1a2e; margin-bottom: 8px; }
+    .section p { color: #888; margin-bottom: 30px; }
+    .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+    .card { background: white; border-radius: 15px; width: 260px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 300px; object-fit: cover; }
+    .card-body { padding: 15px; text-align: center; }
+    .card-body h3 { color: #1a1a2e; margin-bottom: 5px; font-size: 16px; }
+    .card-body .details { color: #666; font-size: 13px; margin-bottom: 8px; line-height: 1.5; }
+    .card-body .price { color: #e94560; font-weight: bold; margin-bottom: 12px; font-size: 18px; }
+    .badge { background: #e94560; color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 8px; }
+    .video-section { background: #1a1a2e; padding: 50px 20px; text-align: center; }
+    .video-section h2 { color: #e94560; font-size: 28px; margin-bottom: 10px; }
+    .video-section p { color: #aaa; margin-bottom: 25px; }
+    .video-section video { width: 500px; height: 500px; object-fit: cover; border-radius: 15px; }
+    .cta { background: linear-gradient(135deg, #e94560, #c73652); color: white; text-align: center; padding: 70px 20px; }
+    .cta h2 { font-size: 34px; margin-bottom: 10px; }
+    .cta p { font-size: 16px; margin-bottom: 25px; opacity: 0.9; }
+    .cta-buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+    footer { background: #0f0f1a; color: #aaa; text-align: center; padding: 30px; }
+    footer span { color: #e94560; }
+    footer p { margin: 5px 0; }
+    @media (max-width: 768px) {
+      nav { flex-direction: column; text-align: center; }
+      nav ul { justify-content: center; }
+      .hero { height: 350px; }
+      .slides img { height: 350px; }
+      .hero-text h2 { font-size: 24px; }
+      .card { width: 90%; }
+      .video-section video { width: 90%; height: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>👗 Fashion Gallery</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#afghan">Afghan Style</a></li>
+      <li><a href="#rayon">Rayon Collection</a></li>
+      <li><a href="#fancy">Fancy Collection</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="slides">
+      <img src="s1.jpg" class="active">
+      <img src="s2.jpg">
+      <img src="s3.jpg">
+    </div>
+    <div class="hero-text">
+      <h2>Latest Collection 2025</h2>
+      <p>Stitched — Afghan Style & Rayon & Fancy Dresses</p>
+      <a href="#afghan" class="btn">Shop Now 🛍️</a>
+      <a href="https://wa.me/918296364215" class="btn-outline">WhatsApp Us 💬</a>
+    </div>
+  </div>
+
+  <!-- AFGHAN STYLE -->
+  <div class="section" id="afghan">
+    <h2>✨ Afghan Style Collection</h2>
+    <p>Pure Rayon with heavy embroidery — Farshi Plazo + Maslin Dupatta</p>
+    <div class="grid">
+      <div class="card">
+        <img src="s1.jpg">
+        <div class="card-body">
+          <span class="badge">🔥 Best Seller</span>
+          <h3>Afghan Style Suit</h3>
+          <p class="details">👗 Pure Rayon Heavy Embroidery<br>👖 Farshi Plazo<br>🧣 Maslin Dupatta<br>📏 Size: M(38) to 3XL(46)</p>
+          <p class="price">₹1,650</p>
+          <a href="https://wa.me/918296364215?text=I want to order Afghan Style Suit S1" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s2.jpg">
+        <div class="card-body">
+          <span class="badge">🔥 Best Seller</span>
+          <h3>Afghan Style Suit</h3>
+          <p class="details">👗 Pure Rayon Heavy Embroidery<br>👖 Farshi Plazo<br>🧣 Maslin Dupatta<br>📏 Size: M(38) to 3XL(46)</p>
+          <p class="price">₹1,650</p>
+          <a href="https://wa.me/918296364215?text=I want to order Afghan Style Suit S2" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s3.jpg">
+        <div class="card-body">
+          <span class="badge">🔥 Best Seller</span>
+          <h3>Afghan Style Suit</h3>
+          <p class="details">👗 Pure Rayon Heavy Embroidery<br>👖 Farshi Plazo<br>🧣 Maslin Dupatta<br>📏 Size: M(38) to 3XL(46)</p>
+          <p class="price">₹1,650</p>
+          <a href="https://wa.me/918296364215?text=I want to order Afghan Style Suit S3" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s4.jpg">
+        <div class="card-body">
+          <span class="badge">🔥 Best Seller</span>
+          <h3>Afghan Style Suit</h3>
+          <p class="details">👗 Pure Rayon Heavy Embroidery<br>👖 Farshi Plazo<br>🧣 Maslin Dupatta<br>📏 Size: M(38) to 3XL(46)</p>
+          <p class="price">₹1,650</p>
+          <a href="https://wa.me/918296364215?text=I want to order Afghan Style Suit S4" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s5.jpg">
+        <div class="card-body">
+          <span class="badge">🔥 Best Seller</span>
+          <h3>Afghan Style Suit</h3>
+          <p class="details">👗 Pure Rayon Heavy Embroidery<br>👖 Farshi Plazo<br>🧣 Maslin Dupatta<br>📏 Size: M(38) to 3XL(46)</p>
+          <p class="price">₹1,650</p>
+          <a href="https://wa.me/918296364215?text=I want to order Afghan Style Suit S5" class="btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RAYON COLLECTION -->
+  <div class="section" id="rayon" style="background:#fff0f5;">
+    <h2>🌸 Rayon Collection</h2>
+    <p>42" Kurti + Plazo + Matching Dupatta</p>
+    <div class="grid">
+      <div class="card">
+        <img src="s6.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S6" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s7.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S7" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s8.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S8" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s9.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S9" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s10.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S10" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s11.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S11" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s12.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S12" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s13.jpg">
+        <div class="card-body">
+          <h3>Rayon Suit</h3>
+          <p class="details">👗 Rayon Fabric 42" Kurti<br>👖 Matching Plazo<br>🧣 Matching Dupatta</p>
+          <p class="price">₹950</p>
+          <a href="https://wa.me/918296364215?text=I want to order Rayon Suit S13" class="btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FANCY COLLECTION -->
+  <div class="section" id="fancy">
+    <h2>💎 Fancy Faux Georgette Collection</h2>
+    <p>Sequence Embroidery + Original Moti Handmade Work — EID Special</p>
+    <div class="grid">
+      <div class="card">
+        <img src="s14.jpg">
+        <div class="card-body">
+          <span class="badge">🌙 EID Special</span>
+          <h3>Fancy Georgette Suit</h3>
+          <p class="details">👗 Fox Georgette Sequence + Moti Work<br>🔙 Back side bhi work<br>👖 Georgette Pent Free Size 39"<br>🧣 Silver Gold Net Dupatta 2.2mtr<br>📏 L(40) XL(42) | 900gm<br>🎨 3 Colours</p>
+          <p class="price">₹1,880</p>
+          <a href="https://wa.me/918296364215?text=I want to order AK-1923 S14" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s15.jpg">
+        <div class="card-body">
+          <span class="badge">🌙 EID Special</span>
+          <h3>Fancy Georgette Suit</h3>
+          <p class="details">👗 Fox Georgette Sequence + Moti Work<br>🔙 Back side bhi work<br>👖 Georgette Pent Free Size 39"<br>🧣 Silver Gold Net Dupatta 2.2mtr<br>📏 L(40) XL(42) | 900gm<br>🎨 3 Colours</p>
+          <p class="price">₹1,880</p>
+          <a href="https://wa.me/918296364215?text=I want to order AK-1923 S15" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s16.jpg">
+        <div class="card-body">
+          <span class="badge">🌙 EID Special</span>
+          <h3>Fancy Georgette Suit</h3>
+          <p class="details">👗 Fox Georgette Sequence + Moti Work<br>🔙 Back side bhi work<br>👖 Georgette Pent Free Size 39"<br>🧣 Silver Gold Net Dupatta 2.2mtr<br>📏 L(40) XL(42) | 900gm<br>🎨 3 Colours</p>
+          <p class="price">₹1,880</p>
+          <a href="https://wa.me/918296364215?text=I want to order AK-1923 S16" class="btn">Order Now</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="s17.jpg">
+        <div class="card-body">
+          <span class="badge">🌙 EID Special</span>
+          <h3>Fancy Georgette Suit</h3>
+          <p class="details">👗 Fox Georgette Sequence + Moti Work<br>🔙 Back side bhi work<br>👖 Georgette Pent Free Size 39"<br>🧣 Silver Gold Net Dupatta 2.2mtr<br>📏 L(40) XL(42) | 900gm<br>🎨 3 Colours</p>
+          <p class="price">₹1,880</p>
+          <a href="https://wa.me/918296364215?text=I want to order AK-1923 S17" class="btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-section" id="video">
+    <h2>🎬 Watch Our Collection</h2>
+    <p>Latest designs showcased just for you!</p>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>📲 Order Karo Aaj Hi!</h2>
+    <p>WhatsApp pe message karo — fast delivery available all over India!</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/918296364215" class="btn" style="background:white; color:#e94560;">WhatsApp Now 💬</a>
+      <a href="tel:+918296364215" class="btn" style="background:transparent; border:2px solid white; color:white;">Call Us 📞</a>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <p>© 2025 <span>Fashion Gallery</span> — All Rights Reserved</p>
+    <p>📞 +918296364215 | 📍 India</p>
+    <p style="margin-top:10px;">
+      <a href="https://wa.me/918296364215" style="color:#e94560; text-decoration:none;">💬 WhatsApp Us</a>
+    </p>
+  </footer>
+
+  <script>
+    let i = 0;
+    const imgs = document.querySelectorAll('.slides img');
+    setInterval(() => {
+      imgs[i].classList.remove('active');
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add('active');
+    }, 3000);
+  </script>
+
+</body>
+</html>
